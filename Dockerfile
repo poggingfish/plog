@@ -4,3 +4,4 @@ RUN apt-get -y upgrade
 COPY src/ /var/www/html/
 COPY data/ /var/www/data/
 RUN chown www-data:www-data /var/www/data
+RUN chmod -R g+s /var/www/data
