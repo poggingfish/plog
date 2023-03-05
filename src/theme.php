@@ -26,7 +26,7 @@
         echo "<h1 class=postname>$postname</h1>";
         echo "<p class=byposter>by $poster</p>";
         echo "<div class=posttext>$post</div>";
-        echo "<p class=timestamp>$date</p>";
+        echo "<p class=timestamp>$date CST</p>";
         back_button();
     }
     function plog_post_doesnt_exist(){
