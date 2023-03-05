@@ -2,12 +2,7 @@
 <body>
 <?php require("../data/conf/config.php");?>
 <?php
-    class MyDB extends SQLite3 {
-        function __construct() {
-        $this->open('../data/db/blog.db');
-        }
-    }
-    $db = new MyDB();
+    $db = new PDO("sqlite:../data/db/blog.db");
     $post_title = $_POST["post_title"];
     $post = $_POST["post"];
     $name = $_POST["name"];
@@ -17,9 +12,10 @@
     $pretty = $dt->format('Y-m-d H:i:s');
     if ($password == $PostPassword){
         $sql =<<<EOF
-            INSERT INTO posts (Posttitle, Post, Poster, Date) VALUES("$post_title", "$post", "$name", "$pretty"); 
+            INSERT INTO posts (Posttitle, Post, Poster, Date) VALUES(?, ?, ?, ?); 
         EOF;
-        $db->exec($sql);
+        $statement = $db->prepare($sql);
+        $statement->execute([$post_title,$post,$name,$pretty]);
         echo "Posted!";
     }
     else{

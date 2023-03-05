@@ -2,19 +2,15 @@
 <body>
 <?php require("../data/conf/config.php");?>
 <?php
-    class MyDB extends SQLite3 {
-        function __construct() {
-        $this->open('../data/db/blog.db');
-        }
-    }
-    $db = new MyDB();
+    $db = new PDO("sqlite:../data/db/blog.db");
     $post_id = $_POST["id"];
     $password = $_POST["password"];
     if ($password == $PostPassword){
         $sql =<<<EOF
-            DELETE FROM posts WHERE Postid=$post_id; 
+            DELETE FROM posts WHERE Postid=?; 
         EOF;
-        $db->exec($sql);
+        $statement = $db->prepare($sql);
+        $statement->execute($post_id);
         echo "Deleted!";
     }
     else{
