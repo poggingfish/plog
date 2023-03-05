@@ -16,7 +16,7 @@
         echo "<hr><h1 class='post_text'>Posts: </h1>";
     }
     function plog_footer(){
-        echo "<div style='position: absolute; bottom: 5px;'>Made with <a href='https://github.com/poggingfish/plog'>plog</a>.</div></body></html>";
+        echo "<div style='position: absolute; bottom: 5px;' class='footer'>Made with <a class='link' href='https://github.com/poggingfish/plog'>plog</a>.</div></body></html>";
     }
     function back_button(){
         echo "<p class='backbutton'><a class='post_link_text' href='/'>Back</a></p>";
@@ -37,6 +37,6 @@
         echo "<p class=viewcounter><b>Views: $views</b></p>";
     }
     function plog_post_link($postid, $title, $poster){
-        echo "<p class=post_link_text><a class=link href='view.php/?postid=$postid'>$title</a> by $poster</p>";
+        echo "<p class=post_link_text><a class='link' href='view.php/?postid=$postid'>$title</a> by $poster</p>";
     }
 ?>
