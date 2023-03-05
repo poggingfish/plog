@@ -8,19 +8,14 @@
         }
     }
     $db = new MyDB();
-    $post_title = $_POST["post_title"];
-    $post = $_POST["post"];
-    $name = $_POST["name"];
+    $post_id = $_POST["id"];
     $password = $_POST["password"];
-    $date = time();
-    $dt = new DateTime("@$date");
-    $pretty = $dt->format('Y-m-d H:i:s');
     if ($password == $PostPassword){
         $sql =<<<EOF
-            INSERT INTO posts (Posttitle, Post, Poster, Date) VALUES("$post_title", "$post", "$name", "$pretty"); 
+            DELETE FROM posts WHERE Postid=$post_id; 
         EOF;
         $db->exec($sql);
-        echo "Posted!";
+        echo "Deleted!";
     }
     else{
         echo "Wrong password!";

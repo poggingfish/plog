@@ -11,4 +11,12 @@
     <br>
     <input type="submit">
 </form>
+<h3>Delete a post: </h3>
+<form action="delete.php" method="post">
+    Password:<br> <input type="password" name="password">
+    <br>
+    Post ID:<br> <input type="number" name="id">
+    <br>
+    <input type="submit">
+</form>
 <?php require("footer.php");?>
