@@ -1,4 +1,4 @@
-<?php require("header.php")?>
+<?php require("theme.php");?>
 <h3>Make a post: </h3>
 <form action="post.php" method="post">
     Password:<br> <input type="password" name="password">
@@ -19,4 +19,4 @@
     <br>
     <input type="submit">
 </form>
-<?php require("footer.php");?>
+<?php plog_footer();?>

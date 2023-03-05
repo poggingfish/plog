@@ -1,4 +1,4 @@
-<?php require("header.php")?>
+<?php require("theme.php")?>
 <?php
     $init = false;
     if (!file_exists("../data/db/blog.db")){
@@ -49,17 +49,16 @@
     SELECT views FROM views;
     EOF;
     $views = $db->querySingle($sql);
-    echo "<p>Page views: $views </p>";
+    index($views);
     // Get posts
     $sql = <<<EOF
         SELECT Posttitle, Postid, Poster FROM posts ORDER BY Postid DESC;
     EOF;
     $ret = $db->query($sql);
-    echo "<hr><h1>Posts: </h1>";
     while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
         $postid = $row["Postid"];
-        echo "<a class='postlink' href='view.php?postid=$postid'>".$row["Posttitle"]." | By: ". $row["Poster"]."<a><br><br>";
+        plog_post_link($postid,$row["Posttitle"], $row["Poster"]);
     }
     $db->close();
+    plog_footer();
 ?>
-<?php require("footer.php");?>
