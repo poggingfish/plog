@@ -16,7 +16,7 @@
         echo "<hr><h1 class='post_text'>Posts: </h1>";
     }
     function plog_footer(){
-        echo "<div style='position: absolute; bottom: 5px;'>Made with plog.</div></body></html>";
+        echo "<div style='position: absolute; bottom: 5px;'>Made with <a href='https://github.com/poggingfish/plog'>plog</a>.</div></body></html>";
     }
     function back_button(){
         echo "<p class='backbutton'><a class='post_link_text' href='/'>Back</a></p>";
