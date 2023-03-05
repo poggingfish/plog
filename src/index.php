@@ -62,4 +62,4 @@
     }
     $db->close();
 ?>
-<?php echo require("footer.php");?>
+<?php require("footer.php");?>

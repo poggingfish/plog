@@ -22,4 +22,4 @@
     }
     echo "<a class='postlink' href='/'>Back</a>";
 ?>
-<?php echo require("footer.php");?>
+<?php require("footer.php");?>
