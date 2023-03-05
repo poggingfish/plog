@@ -10,7 +10,7 @@
             DELETE FROM posts WHERE Postid=?; 
         EOF;
         $statement = $db->prepare($sql);
-        $statement->execute($post_id);
+        $statement->execute(array($post_id));
         echo "Deleted!";
     }
     else{
