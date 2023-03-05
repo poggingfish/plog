@@ -11,4 +11,4 @@
     <br>
     <input type="submit">
 </form>
-<?php echo file_get_contents("footer.html");?>
+<?php echo require("footer.php");?>

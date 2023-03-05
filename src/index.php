@@ -62,6 +62,4 @@
     }
     $db->close();
 ?>
-<?php echo file_get_contents("footer.html");?>
-<?php $x = phpversion();echo"<p>This website is running PHP $x</p>"?>
-<?php $x = phpversion();echo"<p>This website is running <a class='postlink' href='https://github.com/poggingfish/plog'>Plog</a></p>"?>
+<?php echo require("footer.php");?>
