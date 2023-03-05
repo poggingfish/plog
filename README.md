@@ -3,8 +3,12 @@
 
 <br>
 
-#### Just change `config.php` and run PHP and your blog will run!
+#### Just change `data/conf/config.php` and run PHP and your blog will run!
 
 <br>
 
 #### To post just go to `admin.php` and type in your password and post information.
+
+<br>
+
+## Its recommended to use this project with Docker!
