@@ -1,6 +1,6 @@
 <?php require("theme.php");?>
-<h3>Make a post: </h3>
-<form action="post.php" method="post">
+<h3 class='postname'>Make a post: </h3>
+<form class='postname' action="post.php" method="post">
     Password:<br> <input type="password" name="password">
     <br>
     Name:<br> <input type="text" name="name">
@@ -11,8 +11,8 @@
     <br>
     <input type="submit">
 </form>
-<h3>Delete a post: </h3>
-<form action="delete.php" method="post">
+<h3 class='postname'>Delete a post: </h3>
+<form class='postname' action="delete.php" method="post">
     Password:<br> <input type="password" name="password">
     <br>
     Post ID:<br> <input type="number" name="id">
