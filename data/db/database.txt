@@ -4,7 +4,7 @@ Postid -> INTEGER AUTOINCREMENT PRIMARY
 Posttitle -> varchar(100)
 Post -> varchar(2500)
 Poster -> varchar(50)
-ate -> varchar(100)
+Date -> varchar(100)
 
 views:
 
