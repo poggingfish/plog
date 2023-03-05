@@ -1,4 +1,4 @@
-<?php require("config.php");?>
+<?php require("../data/conf/config.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

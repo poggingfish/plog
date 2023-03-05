@@ -1,12 +1,12 @@
 <?php require("header.php")?>
 <?php
     $init = false;
-    if (!file_exists("blog.db")){
+    if (!file_exists("../data/db/blog.db")){
         $init = true;
     }
     class MyDB extends SQLite3 {
         function __construct() {
-            $this->open('blog.db');
+            $this->open('../data/db/blog.db');
         }
     }
     $db = new MyDB();
